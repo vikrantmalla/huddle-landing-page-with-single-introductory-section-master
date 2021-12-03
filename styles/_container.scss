@@ -1,0 +1,148 @@
+.introContainer {
+    header {
+        margin: 2rem;
+        img {
+            width: 40%;
+        }
+    }
+    .introContent {
+        margin: 2rem;
+        text-align: center;
+        display: grid;
+        gap: 1.5rem;
+        .introDesc {
+            h1 {
+                font-size: 1.6rem;
+                color: #fff;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 1rem;
+                color: #fff;
+                margin-bottom: 1.5rem;
+                line-height: 1.5rem;
+            }
+            button {
+                padding: .8rem 1rem;
+                border: none;
+                border-radius: 50px;
+                width: 80%;
+                background-color: #fff;
+                cursor: pointer;
+                box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+                transition: color 250ms ease-in-out, transform 250ms ease-in-out;
+                a {
+                    font-size: .8rem;
+                    text-decoration: none;
+                    color: $colorViolet;
+                }
+                &:hover {
+                    background-color: $colorCSoftMagenta;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        margin: 2rem;
+        @include flex(row, center);
+        gap: 1rem;
+        .introLink {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid lightgray;
+            border-radius: 50%;
+            color: lightgray;
+            text-decoration: none;
+            transition: border 250ms ease-in, color 250ms ease-in, transform 250ms ease-in;
+            &:hover {
+                border: 1px solid $colorCSoftMagenta;
+                color: $colorCSoftMagenta;
+            }
+        }
+    }
+}
+
+@media (min-width: 42em) {
+    .introContainer {
+        header {
+            img {
+                width: 20%;
+            }
+        }
+        .introContent {
+            margin: 2rem 4rem;
+            @include flex(column, center);
+            align-items: center;
+            .introDesc {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media (min-width: 62em) {
+    .introContainer {
+        header {
+            margin: 1rem 2rem 4rem 2rem;
+        }
+        .introContent {
+            margin: 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            .introDesc {
+                width: 100%;
+                margin-top: 2rem;
+                h1 {
+                    font-size: 2.2rem;
+                }
+                p {
+                    font-size: .9rem;
+                }
+                button {
+                    width: 40%;
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        footer {
+            @include flex(row, flex-end);
+        }
+    }
+}
+
+@media (min-width: 87em) {
+    .introContainer {
+        header {
+            margin: 1rem 2rem 10rem 2rem;
+        }
+        .introContent {
+            gap: 2.5rem;
+            .introDesc {
+                width: 80%;
+                h1 {
+                    font-size: 2.5rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+                button {
+                    width: 35%;
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+    /*Primary */
+    
+    $colorViolet: hsl(257, 40%, 49%);
+    $colorCSoftMagenta: hsl(300, 69%, 71%);
+    /*mixin */
+    
+    @mixin flex($direction, $justify) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: center;
+    }
