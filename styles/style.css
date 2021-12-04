@@ -2,15 +2,14 @@
 /*Primary */
 /*mixin */
 .introContainer header {
-  margin: 2rem;
+  margin: 2rem 0;
 }
 
 .introContainer header img {
-  width: 40%;
+  width: 50%;
 }
 
 .introContainer .introContent {
-  margin: 2rem;
   text-align: center;
   display: -ms-grid;
   display: grid;
@@ -30,11 +29,12 @@
   line-height: 1.5rem;
 }
 
-.introContainer .introContent .introDesc button {
+.introContainer .introContent .introDesc a {
   padding: .8rem 1rem;
   border: none;
   border-radius: 50px;
-  width: 80%;
+  width: 100%;
+  padding: .8rem 2rem;
   background-color: #fff;
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
@@ -43,24 +43,21 @@
   transition: color 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   transition: color 250ms ease-in-out, transform 250ms ease-in-out;
   transition: color 250ms ease-in-out, transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-}
-
-.introContainer .introContent .introDesc button a {
   font-size: .8rem;
   text-decoration: none;
   color: #674baf;
 }
 
-.introContainer .introContent .introDesc button:hover {
+.introContainer .introContent .introDesc a:hover {
   background-color: #e882e8;
 }
 
-.introContainer .introContent .introDesc button:hover a {
+.introContainer .introContent .introDesc a:hover a {
   color: #fff;
 }
 
 .introContainer footer {
-  margin: 2rem;
+  margin: 4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,7 +106,6 @@
     width: 20%;
   }
   .introContainer .introContent {
-    margin: 2rem 4rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -132,10 +128,9 @@
 
 @media (min-width: 62em) {
   .introContainer header {
-    margin: 1rem 2rem 4rem 2rem;
+    margin: 0 0 4rem 0;
   }
   .introContainer .introContent {
-    margin: 2rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -150,18 +145,17 @@
   }
   .introContainer .introContent .introDesc {
     width: 100%;
-    margin-top: 2rem;
+    place-self: center;
   }
   .introContainer .introContent .introDesc h1 {
     font-size: 2.2rem;
   }
   .introContainer .introContent .introDesc p {
     font-size: .9rem;
+    margin-bottom: 2rem;
   }
-  .introContainer .introContent .introDesc button {
-    width: 40%;
-  }
-  .introContainer .introContent .introDesc button a {
+  .introContainer .introContent .introDesc a {
+    padding: .8rem 5rem;
     font-size: 1rem;
   }
   .introContainer footer {
@@ -178,12 +172,13 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 1rem 0;
   }
 }
 
 @media (min-width: 87em) {
   .introContainer header {
-    margin: 1rem 2rem 10rem 2rem;
+    margin: 0 0 8rem 0;
   }
   .introContainer .introContent {
     gap: 2.5rem;
@@ -197,10 +192,7 @@
   .introContainer .introContent .introDesc p {
     font-size: 1.2rem;
   }
-  .introContainer .introContent .introDesc button {
-    width: 35%;
-  }
-  .introContainer .introContent .introDesc button a {
+  .introContainer .introContent .introDesc a {
     font-size: 1.2rem;
   }
 }
@@ -242,6 +234,7 @@ main {
   align-items: center;
   max-width: 100%;
   min-height: 100vh;
+  margin: 0 2rem;
 }
 
 img {
@@ -260,6 +253,9 @@ img {
 @media (min-width: 62em) {
   body {
     background-image: url(../images/bg-desktop.svg);
+  }
+  main {
+    margin: 0 4rem;
   }
 }
 
